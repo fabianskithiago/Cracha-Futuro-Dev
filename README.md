@@ -8,6 +8,7 @@ Site para a Feira de Profissões. Dá para personalizar um crachá com nome, ár
 - Guilherme Reyel
 - Arthur Felipe
 - Petryus Oliveira
+- Mateus Polak
 ## Curso
 - Sistemas de Informação / Análise e Desenvolvimento de Sistemas 4° período
 
