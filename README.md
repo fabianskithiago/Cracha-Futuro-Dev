@@ -4,10 +4,11 @@
 Site para a Feira de Profissões. Dá para personalizar um crachá com nome, área de TI, cor e avatar.
 
 ## Integrantes
-- [Coloque os nomes da equipe]
+- Thiago Fabianski
+- Guilherme Reyel
 
 ## Curso
-- [Coloque o nome do curso e o período]
+- Sistemas de Informação / Análise e Desenvolvimento de Sistemas 4° período
 
 ## Como usar
 1. Abra `index.html` no navegador.
