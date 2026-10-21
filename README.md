@@ -6,6 +6,7 @@ Site para a Feira de Profissões. Dá para personalizar um crachá com nome, ár
 ## Integrantes
 - Thiago Fabianski
 - Guilherme Reyel
+- Petryus Oliveira
 
 ## Curso
 - Sistemas de Informação / Análise e Desenvolvimento de Sistemas 4° período
