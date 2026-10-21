@@ -1,0 +1,384 @@
+/* ==========================================================================
+   RESET E BASE
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  color: #f1f5f9;
+  background: #111827;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+hr {
+  margin: 20px 0 14px;
+  border: 0;
+  border-top: 1px solid #cbd5e1;
+}
+
+
+/* ==========================================================================
+   CABEÇALHO E RODAPÉ
+   ========================================================================== */
+
+header {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #334155;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+}
+
+footer {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Painéis (cartões) compartilhados */
+.controles,
+.visual,
+.codigo {
+  padding: 20px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+}
+
+
+/* ==========================================================================
+   FORMULÁRIO E CONTROLES
+   ========================================================================== */
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  color: #f8fafc;
+  background: #111827;
+  border: 1px solid #4b5563;
+  border-radius: 7px;
+}
+
+/* Seletor de cores */
+.cores,
+.avatares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.cor {
+  width: 34px;
+  height: 34px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cor.selecionada {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+/* Seletor de avatares */
+.avatar {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #4b5563;
+  border-radius: 9px;
+  background: #111827;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.avatar.selecionado {
+  border: 2px solid #60a5fa;
+  background: #263b59;
+}
+
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+
+button {
+  transition: transform .15s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.principal,
+.secundario {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.principal {
+  color: white;
+  background: #3478f6;
+  border: 0;
+}
+
+.secundario {
+  margin-top: 8px;
+  color: #e2e8f0;
+  background: transparent;
+  border: 1px solid #64748b;
+}
+
+
+/* ==========================================================================
+   ACESSIBILIDADE (FOCO NO TECLADO)
+   Aparece só na navegação por teclado (Tab), não ao clicar com o mouse.
+   ========================================================================== */
+
+input:focus-visible,
+select:focus-visible,
+.cor:focus-visible,
+.avatar:focus-visible,
+.principal:focus-visible,
+.secundario:focus-visible,
+.sair-foto:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   VISUALIZAÇÃO DO CRACHÁ
+   ========================================================================== */
+
+.visual {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(240px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.visual > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.cracha {
+  overflow: hidden;
+  max-width: 310px;
+  width: 100%;
+  margin: 0 auto;
+  color: #111827;
+  background: #3478f6;
+  border-radius: 14px;
+}
+
+.faixa {
+  height: 12px;
+  background: rgba(255, 255, 255, .45);
+}
+
+.conteudo-cracha {
+  min-height: 350px;
+  padding: 20px 16px;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent 35%, #f8fafc 35%);
+}
+
+.marca {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.avatar-cracha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  margin: 22px auto 12px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: #dbeafe;
+  font-size: 48px;
+}
+
+#nome-cracha {
+  margin: 10px 0 5px;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+#area-cracha {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.estudante {
+  color: #475569;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.codar {
+  color: #111827;
+  font-weight: bold;
+}
+
+
+/* ==========================================================================
+   BLOCO DE CÓDIGO
+   ========================================================================== */
+
+.codigo {
+  min-width: 0;
+}
+
+.codigo pre {
+  overflow-x: auto;
+  padding: 14px;
+  color: #a7f3d0;
+  background: #111827;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================================
+   MODO FOTO
+   ========================================================================== */
+
+.modo-foto header,
+.modo-foto .controles,
+.modo-foto .codigo,
+.modo-foto footer {
+  display: none;
+}
+
+.modo-foto .container {
+  display: block;
+  max-width: 500px;
+}
+
+.modo-foto .visual {
+  display: block;
+  border: 0;
+  background: transparent;
+}
+
+.modo-foto .visual > h2 {
+  display: none;
+}
+
+.modo-foto .cracha {
+  max-width: 350px;
+}
+
+/* Botão para sair do modo foto (também funciona com a tecla Esc) */
+.sair-foto {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 14px;
+  color: #e2e8f0;
+  background: #1f2937;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.modo-foto .sair-foto {
+  display: block;
+}
+
+/* No computador o botão fica invisível até passar o mouse ou focar,
+   para não aparecer no print. No celular continua discreto e visível. */
+@media (hover: hover) {
+  .sair-foto {
+    opacity: 0;
+  }
+
+  .sair-foto:hover,
+  .sair-foto:focus-visible {
+    opacity: 1;
+  }
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 800px) {
+  body {
+    padding: 14px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    grid-template-columns: 1fr;
+  }
+
+  .visual > h2 {
+    grid-column: auto;
+  }
+}

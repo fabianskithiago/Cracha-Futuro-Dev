@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Dev - Meu Crachá</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>&lt;/&gt; Futuro Dev</h1>
+        <p>Gerador de Crachá</p>
+    </header>
+
+    <main class="container">
+        <section class="controles">
+            <h2>Personalize seu crachá</h2>
+            <label for="nome">Seu nome</label>
+            <input id="nome" type="text" maxlength="24" placeholder="Digite seu nome">
+
+            <label for="area">Área de TI</label>
+            <select id="area">
+                <option>Desenvolvedor Front-end</option>
+                <option>Desenvolvedor Back-end</option>
+                <option>Analista de Dados</option>
+                <option>Segurança da Informação</option>
+                <option>Desenvolvedor de Games</option>
+                <option>Designer UX/UI</option>
+            </select>
+
+            <label>Cor do crachá</label>
+            <div class="cores">
+                <button type="button" class="cor selecionada" data-cor="#3478f6" style="background:#3478f6" aria-label="Azul"></button>
+                <button type="button" class="cor" data-cor="#8b45df" style="background:#8b45df" aria-label="Roxo"></button>
+                <button type="button" class="cor" data-cor="#ed3264" style="background:#ed3264" aria-label="Rosa"></button>
+                <button type="button" class="cor" data-cor="#ef4444" style="background:#ef4444" aria-label="Vermelho"></button>
+                <button type="button" class="cor" data-cor="#f97316" style="background:#f97316" aria-label="Laranja"></button>
+                <button type="button" class="cor" data-cor="#16a765" style="background:#16a765" aria-label="Verde"></button>
+                <button type="button" class="cor" data-cor="#0ea5c6" style="background:#0ea5c6" aria-label="Ciano"></button>
+                <button type="button" class="cor" data-cor="#eab308" style="background:#eab308" aria-label="Amarelo"></button>
+                <button type="button" class="cor" data-cor="#64748b" style="background:#64748b" aria-label="Cinza"></button>
+                <button type="button" class="cor" data-cor="#252a34" style="background:#252a34" aria-label="Grafite"></button>
+            </div>
+
+            <label>Avatar</label>
+            <div class="avatares">
+                <button type="button" class="avatar selecionado" data-avatar="👨‍💻">👨‍💻</button>
+                <button type="button" class="avatar" data-avatar="👩‍💻">👩‍💻</button>
+                <button type="button" class="avatar" data-avatar="🧑‍🚀">🧑‍🚀</button>
+                <button type="button" class="avatar" data-avatar="🤖">🤖</button>
+                <button type="button" class="avatar" data-avatar="🦊">🦊</button>
+                <button type="button" class="avatar" data-avatar="👾">👾</button>
+            </div>
+
+            <button type="button" id="modo-foto" class="principal">Modo foto</button>
+            <button type="button" id="reiniciar" class="secundario">Voltar / reiniciar</button>
+        </section>
+
+        <section class="visual">
+            <h2>Seu crachá</h2>
+            <div id="cracha" class="cracha">
+                <div id="faixa" class="faixa"></div>
+                <div class="conteudo-cracha">
+                    <p class="marca">&lt;/&gt; FUTURO DEV</p>
+                    <div id="avatar-cracha" class="avatar-cracha">👨‍💻</div>
+                    <h2 id="nome-cracha">Seu nome</h2>
+                    <p id="area-cracha">Desenvolvedor Front-end</p>
+                    <hr>
+                    <p class="estudante">ESTUDANTE DE TECNOLOGIA</p>
+                    <p class="codar">&lt;CODAR /&gt;</p>
+                </div>
+            </div>
+            <div class="codigo">
+                <h2>Código gerado</h2>
+                <pre><code id="codigo-texto">const nome = "Seu nome";
+const area = "Desenvolvedor Front-end";
+const cor = "#3478f6";
+const avatar = "👨‍💻";</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Feito com HTML, CSS e JavaScript por alunos do curso de Análise e SI da Unifacear.
+        <p>Equipe: Mateus Polak, Arthur, Thiago Estevão, Petryus Oliveira e Guilherme Reyel.</p>
+    </footer>
+
+    <!-- Aparece só no modo foto (também dá para sair com a tecla Esc) -->
+    <button type="button" id="sair-foto" class="sair-foto">Sair do modo foto</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
